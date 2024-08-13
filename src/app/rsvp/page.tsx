@@ -53,7 +53,7 @@ const RSVPpage = () => {
           <h4
             className={`text-2xl font-bold text-center ${libreBaskerville.className}`}
           >
-            on 1/30/26
+            on January 30th, 2026
           </h4>
           <h6
             className={`text-lg font-bold text-center ${libreBaskerville.className}`}
