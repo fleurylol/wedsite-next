@@ -1,14 +1,18 @@
 import React from "react";
+import Link from "next/link";
 
 const NavBar = () => {
   return (
     <>
       <Logo />
-      <ul className="flex bg-yellow-300 w-full justify-center">
-        <li className="p-2">Dress Code</li>
-        <li className="p-2">FAQ</li>
-        <li className="p-2">Travel</li>
-        <li className="p-2">RSVP</li>
+      <ul className="flex bg-blue-400 rounded-lg w-full text-white justify-center m-2">
+        <li className="p-2 text-outline">
+          <Link href="/gallery">Gallery</Link>
+        </li>
+        <li className="p-2 text-outline">Dress Code</li>
+        <li className="p-2 text-outline">FAQ</li>
+        <li className="p-2 text-outline">Travel</li>
+        <li className="p-2 text-outline">RSVP</li>
       </ul>
     </>
   );

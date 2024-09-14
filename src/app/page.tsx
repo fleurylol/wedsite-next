@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-blue-300 flex items-center flex-col p-2">
+    <main className="flex items-center flex-col p-2">
       <p>{daysLeft} days left to the wedding!</p>
       <NavBar />
       <Image
