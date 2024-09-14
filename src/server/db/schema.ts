@@ -26,8 +26,10 @@ export const weddingRSVP = createTable(
   {
     id: serial("id").primaryKey(),
     partyName: varchar("partyName", { length: 256 }),
+    guestName: varchar("guestName", { length: 256 }),
+    songRequest: varchar("songRequest", { length: 256 }),
   },
   (example) => ({
-    partyIndex: index("weddingRSVP_idx").on(example.partyName),
+    guestIndex: index("weddingRSVP_idx").on(example.guestName),
   }),
 );
