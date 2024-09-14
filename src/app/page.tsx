@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import NavBar from "./NavBar";
 
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
@@ -14,8 +15,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="bg-blue-300 flex items-center flex-col p-2">
       <p>{daysLeft} days left to the wedding!</p>
+      <NavBar />
       <Image
         src="https://photos.smugmug.com/Fleury-Engagement-/i-ZFP6rzZ/0/MwpS9Vnjk9TxcKTzMfJSXqwBX6xHB8TWMVBCMB7rz/X4/093A7771-X4.jpg"
         alt="Wedding photo"
