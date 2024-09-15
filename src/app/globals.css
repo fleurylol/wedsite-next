@@ -8,13 +8,17 @@
     1px 1px 0 #000;
 }
 
-.embla {
+.google-slides-container {
+  position: relative;
+  width: 100%;
+  padding-top: 200%;
   overflow: hidden;
 }
-.embla__container {
-  display: flex;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
+
+.google-slides-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
