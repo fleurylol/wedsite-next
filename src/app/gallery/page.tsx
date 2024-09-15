@@ -11,36 +11,13 @@ import Image from "next/image";
 
 const Gallery = () => {
   return (
-    <div className="flex">
-      <Carousel
-        className=""
-        opts={{
-          align: "center",
-          loop: true,
-        }}
-      >
-        <div className="border max-w-lg">
-          <CarouselContent>
-            {photos.map((photo) => (
-              <CarouselItem key={photo.order}>
-                <Image
-                  src={photo.url}
-                  alt="Wedding photo"
-                  width={500}
-                  height={500}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </div>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <iframe
+      src="https://docs.google.com/presentation/d/1PAsB3CbMwPJxs6B9peV4gw8m2aoWsLHQ2J7gH2P3gXY/embed?start=false&loop=false&delayms=3000"
+      width="960"
+      height="569"
+      allowFullScreen={true}
+    ></iframe>
   );
-};
-const Logo = () => {
-  return <div className="size-64 border"></div>;
 };
 
 export default Gallery;
