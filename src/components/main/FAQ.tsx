@@ -4,7 +4,7 @@ const FAQs = [
   {
     question: "What food will be served?",
     answer:
-      "We will have a create your own pasta station which offers spaghetti or fettuccine with alfredo, meat sauce, or marinara, plus toppings like grilled chicken, meatballs, and italian sausage. Plus a side of breadsticks and a salad.",
+      "We will have a create your own pasta station, which will offer spaghetti or fettuccine with alfredo, meat sauce, or marinara, plus toppings like grilled chicken, meatballs, and italian sausage. Plus a side of breadsticks and a salad.",
   },
   {
     question: "Is there wheelchair accessibility?",
