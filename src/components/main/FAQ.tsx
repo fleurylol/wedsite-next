@@ -18,7 +18,7 @@ const FAQs = [
 
 const FAQ = () => {
   return (
-    <div className="w-full">
+    <div className="w-full p-2">
       <h1 className="text-3xl font-bold underline text-center">FAQs</h1>
       {FAQs.map((faq) => (
         <div key={faq.question}>
