@@ -5,13 +5,13 @@ const NavBar = () => {
   return (
     <>
       <Logo />
-      <ul className="flex bg-blue-400 rounded-lg w-full text-white justify-center m-2">
+      <ul className="flex bg-blue-300 rounded-lg w-full justify-center m-2">
+        <li className="p-2 text-outline">FAQ</li>
+        <li className="p-2 text-outline">Registries</li>
+        <li className="p-2 text-outline">Travel</li>
         <li className="p-2 text-outline">
           <Link href="/gallery">Gallery</Link>
         </li>
-        <li className="p-2 text-outline">Dress Code</li>
-        <li className="p-2 text-outline">FAQ</li>
-        <li className="p-2 text-outline">Travel</li>
         <li className="p-2 text-outline">RSVP</li>
       </ul>
     </>

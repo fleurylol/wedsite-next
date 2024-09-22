@@ -17,6 +17,7 @@ const Gallery = () => {
         width="400"
         height="700"
         allowFullScreen={true}
+        className="absolute top-0 left-0 w-full h-full lg:h-1/2"
       ></iframe>
     </div>
   );

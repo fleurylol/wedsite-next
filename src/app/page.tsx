@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import NavBar from "./NavBar";
+import Registry from "@/components/main/Registry";
+import FAQ from "@/components/main/FAQ";
 
 export default function Home() {
   const [daysLeft, setDaysLeft] = useState(0);
@@ -24,6 +26,8 @@ export default function Home() {
         width={500}
         height={500}
       />
+      <FAQ />
+      
     </main>
   );
 }
