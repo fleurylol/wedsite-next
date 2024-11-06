@@ -6,6 +6,7 @@ import {
   index,
   pgTableCreator,
   serial,
+  boolean,
   timestamp,
   varchar,
   pgEnum,
@@ -17,19 +18,18 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const createTable = pgTableCreator(
-  (name) => `wedsite_${name}`,
-);
+export const createTable = pgTableCreator((name) => `wedsite_${name}`);
 
 export const weddingRSVP = createTable(
   "weddingRSVP",
   {
     id: serial("id").primaryKey(),
-    partyName: varchar("partyName", { length: 256 }),
     guestName: varchar("guestName", { length: 256 }),
+    hasPlusOne: boolean("hasPlusOne"),
+    attending: boolean("attending"),
     songRequest: varchar("songRequest", { length: 256 }),
   },
   (example) => ({
     guestIndex: index("weddingRSVP_idx").on(example.guestName),
-  }),
+  })
 );

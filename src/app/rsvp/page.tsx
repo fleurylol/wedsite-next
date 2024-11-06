@@ -1,40 +1,22 @@
-"use client";
 import React from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-
-type FormValues = {
-  guestName: string;
-  songRequest: string;
-};
 
 const RSVPTest = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormValues>();
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-  };
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="text"
-        {...register("guestName", { required: true })}
-        placeholder="First & Last Name"
-        id="guestName"
-      />
-      {errors.guestName && <span>This field is required</span>}
-      <input
-        type="text"
-        {...register("songRequest")}
-        placeholder="Song Request"
-        id="songRequest"
-      />
-      <input type="submit" />
-    </form>
+    <div>
+      <form>
+        <input type="text" />
+        <input type="text" />
+      </form>
+    </div>
   );
+};
+
+//how is this going to work?
+//are we going to have a form that takes in the guest's name and then the number of guests they are bringing?
+//or do we set how many they can rsvp with? set a code or something? for each party?
+
+const GuestInput = () => {
+  return <div>GuestInput</div>;
 };
 
 export default RSVPTest;

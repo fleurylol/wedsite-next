@@ -12,7 +12,9 @@ const NavBar = () => {
         <li className="p-2 text-outline">
           <Link href="/gallery">Gallery</Link>
         </li>
-        <li className="p-2 text-outline">RSVP</li>
+        <li className="p-2 text-outline">
+          <Link href="/rsvp">RSVP</Link>
+        </li>
       </ul>
     </>
   );
