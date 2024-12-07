@@ -1,5 +1,7 @@
 import { drizzle } from "drizzle-orm/vercel-postgres";
+import { sql } from "@vercel/postgres";
 
-import { sql } from "drizzle-orm";
+import * as schema from "./schema";
 
-export const db = drizzle(sql);
+// Use this object to send drizzle queries to your DB
+export const db = drizzle(sql, { schema });

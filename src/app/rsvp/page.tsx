@@ -1,22 +1,28 @@
+"use client";
+import { findGuest } from "@/server/db/queries";
 import React from "react";
 
-const RSVPTest = () => {
+const RSVP = () => {
+  const [guestName, setGuestName] = React.useState("");
+  const [notFound, setNotFound] = React.useState(false);
+  const handleInput = () => (e: React.ChangeEvent<HTMLInputElement>) => {
+    setGuestName(e.target.value);
+  };
+  const handleRSVP = async () => {
+    const guest = await findGuest(guestName);
+    if (guest.length === 0) {
+      setNotFound(true);
+      return;
+    }
+    console.log(guest);
+  };
   return (
     <div>
-      <form>
-        <input type="text" />
-        <input type="text" />
-      </form>
+      <input type="text" placeholder="Name" onChange={handleInput()} />
+      {notFound && <div>Guest not found</div>}
+      <button onClick={() => handleRSVP()}>RSVP</button>
     </div>
   );
 };
 
-//how is this going to work?
-//are we going to have a form that takes in the guest's name and then the number of guests they are bringing?
-//or do we set how many they can rsvp with? set a code or something? for each party?
-
-const GuestInput = () => {
-  return <div>GuestInput</div>;
-};
-
-export default RSVPTest;
+export default RSVP;
