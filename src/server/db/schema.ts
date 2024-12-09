@@ -24,10 +24,12 @@ export const weddingRSVP = createTable(
   "weddingRSVP",
   {
     id: serial("id").primaryKey(),
-    guestName: varchar("guestName", { length: 256 }),
-    hasPlusOne: boolean("hasPlusOne"),
-    attending: boolean("attending"),
-    songRequest: varchar("songRequest", { length: 256 }),
+    guestName: varchar("guestName", { length: 256 }).notNull(),
+    hasPlusOne: boolean("hasPlusOne").default(false).notNull(),
+    attending: boolean("attending").default(false).notNull(),
+    songRequest: varchar("songRequest", { length: 256 })
+      .default("No Song Request")
+      .notNull(),
   },
   (example) => ({
     guestIndex: index("weddingRSVP_idx").on(example.guestName),
