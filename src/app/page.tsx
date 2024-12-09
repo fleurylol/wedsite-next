@@ -34,7 +34,7 @@ export default function Home() {
 
 const WhereWhen = () => {
   return (
-    <div className="w-full p-2 bg-blue-200 m-4">
+    <div className="w-full flex flex-col items-center p-2 bg-blue-200 m-4">
       <h1 className="text-center">Where & When</h1>
       <p>April 18, 2025</p>
       <p>5:00 PM</p>

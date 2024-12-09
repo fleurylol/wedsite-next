@@ -1,3 +1,10 @@
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@radix-ui/react-accordion";
+import { ChevronDownIcon } from "lucide-react";
 import React from "react";
 
 const FAQs = [
@@ -18,15 +25,28 @@ const FAQs = [
 
 const FAQ = () => {
   return (
-    <div className="w-full p-2">
-      <h1 className="text-3xl font-bold underline text-center">FAQs</h1>
-      {FAQs.map((faq) => (
-        <div key={faq.question}>
-          <h2 className="text-lg font-bold">{faq.question}</h2>
-          <p className="pl-4">{faq.answer}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="w-full p-2">
+        <h1 className="text-3xl font-bold underline text-center">FAQs</h1>
+        {FAQs.map((faq) => (
+          <>
+            <Accordion type="multiple">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  <div className="flex">
+                    <h2 className="text-lg font-bold">{faq.question}</h2>
+                    <ChevronDownIcon className="AccordionChevron" aria-hidden />
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="pl-4">{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -15,6 +15,10 @@
   overflow: hidden;
 }
 
+.AccordionTrigger[data-state="open"] > .AccordionChevron {
+  transform: rotate(180deg);
+}
+
 .google-slides-container iframe {
   position: absolute;
   top: 0;
